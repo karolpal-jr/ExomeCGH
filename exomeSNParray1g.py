@@ -16,7 +16,7 @@ args = parser.parse_args()
 print(args.name)
 
 
-COORDINATES = "./snp/snp1kGP_intersect_truseq_chr1.vcf"
+COORDINATES = "./snp/snp1kGP_intersect_truseq.vcf"
 
 def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, length = 100, fill = '█'):
     """
