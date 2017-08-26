@@ -13,9 +13,6 @@ parser.add_argument("bam1")
 parser.add_argument("-n","--name",help="name of the output plot")
 args = parser.parse_args()
 
-print(args.name)
-
-
 COORDINATES = "./snp/snp1kGP_intersect_truseq.vcf"
 
 def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, length = 100, fill = '█'):
