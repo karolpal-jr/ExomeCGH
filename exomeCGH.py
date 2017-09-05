@@ -11,6 +11,8 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("bam1")
 parser.add_argument("-n","--name",help="name of the output plot")
+parser.add_argument('-s',help="save data.frame to csv", action='store_true')
+
 args = parser.parse_args()
 
 COORDINATES = "./snp/snp1kGP_intersect_truseq.vcf"
@@ -105,4 +107,8 @@ if(args.name != None):
     fn = args.name
 else:
     fn = 'out1'
+
+if(args.s):
+    df.to_csv(fn + '.csv', index=False)
+
 pylab.savefig(fn+".pdf")
